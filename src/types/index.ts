@@ -34,7 +34,7 @@ export interface ClientToServerEvents {
 	"user:toggle-video": (peerId: PeerId) => void;
 }
 
-export interface ServerToClientsEvents {
+export interface ServerToClientEvents {
 	"meeting:full": () => void;
 	"user:wait-for-owner": () => void;
 	"user:join": (data: PeerUser) => void;
@@ -46,7 +46,7 @@ export interface ServerToClientsEvents {
 	"user:left": (peerId: PeerId) => void;
 }
 
-export type SocketType = Socket<ClientToServerEvents, ServerToClientsEvents>;
+export type SocketType = Socket<ClientToServerEvents, ServerToClientEvents>;
 
 export type KeyValue<T> = Record<string, T>;
 

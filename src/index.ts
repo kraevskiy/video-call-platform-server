@@ -6,7 +6,7 @@ import {
 	ClientToServerEvents,
 	KeyValue,
 	MeetingType,
-	ServerToClientsEvents,
+	ServerToClientEvents,
 } from "./types";
 import { userConnectionEvents } from "./events/user.events";
 
@@ -21,7 +21,7 @@ const expressServer = app.listen(PORT, () => {
 
 export const meetings: KeyValue<MeetingType> = {};
 
-export const io = new Server<ClientToServerEvents, ServerToClientsEvents>(
+export const io = new Server<ClientToServerEvents, ServerToClientEvents>(
 	expressServer,
 	{
 		cors: {
