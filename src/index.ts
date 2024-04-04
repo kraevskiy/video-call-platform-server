@@ -10,7 +10,7 @@ import {
 } from "./types";
 import { userConnectionEvents } from "./events/user.events";
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 5000;
 const app: Application = express();
 
 app.use(cors());
